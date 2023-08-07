@@ -1,0 +1,38 @@
+Criando ec2 na aws
+Pelo terraform
+
+# Cria os arquivos para se comunicar com o terraform
+terraform init 
+
+terraform plan
+
+# USUARIO aws
+Cria o IAM user na aws
+Cria o gp com politica de adm la tbm
+
+#Configure aws cli 
+# passando o profile 
+aws configure --profile "tf014"
+
+
+
+# Para ver as credentials cadastradas
+cat ~/.aws/credentials
+
+#
+terraform apply
+
+
+# Criar par de chaves ssh
+# Criar grupo de seguranca
+ssh -i "estudoalura.pem" ubuntu@ec2-18-212-207-96.compute-1.amazonaws.com
+
+#estou dentro da maquina da aws
+echo "<h1>Ola pessoal</h1>" > index.html
+ls
+
+# Servidor htp ubunto
+nohup busybox http -f -p 8080 &
+
+#Vai na instacia ec2 e pega o endereco ipv4
+http://18.212.207.96:8080
