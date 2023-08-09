@@ -10,6 +10,7 @@ terraform plan
 Cria o IAM user na aws
 Cria o gp com politica de adm la tbm
 
+
 #Configure aws cli 
 # passando o profile 
 aws configure --profile "tf014"
@@ -32,7 +33,18 @@ echo "<h1>Ola pessoal</h1>" > index.html
 ls
 
 # Servidor htp ubunto
-nohup busybox http -f -p 8080 &
+nohup busybox httpd -f -p 8080 &
 
 #Vai na instacia ec2 e pega o endereco ipv4
 http://18.212.207.96:8080
+
+# Fazendo Rep GitHub
+git init
+git add .
+git commit -m "commit inicial"
+
+# Ver conteudo de arquivo 
+cat index.html
+
+# Ansible
+ansible-playbook playbook.yml -u ubunto --private-key estudoalura.pem -i hosts.yml
